@@ -1,0 +1,8 @@
+# Node artifacts
+node_modules/
+
+# Local env files
+.env
+
+# Devcontainer volumes
+.devcontainer/local/
