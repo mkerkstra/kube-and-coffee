@@ -19,7 +19,8 @@ This repository accompanies a series of talks that teach the fundamentals of Kub
 ```
 .sessions/          # Each numbered folder contains examples for a talk
 └── 01-namespace-of-mind/
-    └── README.md   # Session notes and hands-on steps
+    ├── README.md           # Session notes and hands-on steps
+    └── hello-deployment.yaml  # Example manifest for the session
 ```
 
 You can work through the sessions in order. As the series grows, the dev container will evolve to include more tools.
