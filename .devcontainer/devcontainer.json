@@ -3,9 +3,17 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "runArgs": ["--privileged"],
-    "postCreateCommand": "kind create cluster --config .devcontainer/kind-config.yaml || true",
-    "features": {},
+    "runArgs": [
+        "--privileged"
+    ],
+    "postCreateCommand": "kind create cluster --config .devcontainer/kind-config.yaml || true && mkdir -p ~/.kube && kind get kubeconfig > ~/.kube/config",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "enableNonRootDocker": true,
+            "moby": true
+        }
+    },
     "customizations": {
         "vscode": {
             "settings": {
