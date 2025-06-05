@@ -11,8 +11,9 @@ This repository accompanies a series of talks that teach the fundamentals of Kub
 ### Using the Dev Container
 1. Clone this repository.
 2. Open it in VS Code and choose **Reopen in Container** when prompted.
-3. The first build installs Node.js, `kubectl`, `helm` and `kind`. A local Kubernetes cluster is created automatically.
-4. (Optional) Run `install-ollama` inside the dev container to add [Ollama](https://ollama.ai) for AI‑generated manifests.
+3. The first build installs Node.js, `kubectl`, `helm` and `kind`. A local Kubernetes cluster is created automatically using `.devcontainer/kind-config.yaml` which exposes ports `11434` and `3080` on the host.
+4. (Optional) Run `install-ollama` inside the dev container to add [Ollama](https://ollama.ai) for AI‑generated manifests. Example manifests for an Ollama service and a LibreChat UI are included in `sessions/01-namespace-of-mind/`.
+5. CoreDNS is deployed by default so services can resolve each other via DNS.
 
 ### Repository Structure
 
