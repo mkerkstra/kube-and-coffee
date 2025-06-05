@@ -6,6 +6,9 @@
     "runArgs": [
         "--privileged"
     ],
+    "forwardPorts": [
+        3080
+    ],
     "postCreateCommand": "kind create cluster --config .devcontainer/kind-config.yaml || true && mkdir -p ~/.kube && kind get kubeconfig > ~/.kube/config",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
